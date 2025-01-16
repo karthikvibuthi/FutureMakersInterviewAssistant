@@ -18,7 +18,7 @@ submitButton.addEventListener("click", async () => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer YOUR_API_KEY`,
+      Authorization: "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",
     },
     body: JSON.stringify({
       model: "text-davinci-003",
