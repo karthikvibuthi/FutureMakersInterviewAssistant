@@ -14,18 +14,16 @@ submitButton.addEventListener("click", async () => {
         From the knowledge base on model planes, list the required materials and tools.
     `;
 
-  const response = await fetch("https://api.openai.com/v1/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: "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",
-    },
-    body: JSON.stringify({
-      model: "text-davinci-003",
-      prompt: prompt,
-      max_tokens: 150,
-    }),
-  });
+    async function askQuestion(question) {
+        const response = await fetch("https://karthikvibuthiportfolio.com/portfoliogptagent/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question: question }),
+        });
+        const data = await response.json();
+        
+        return data.answer || data.error;
+    }
 
   const result = await response.json();
   const materials = result.choices[0].text.trim();
