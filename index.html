@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model Plane Interview Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Model Plane Interview Assistant</h1>
+      <div id="questions">
+        <label for="wing-span">What is the wingspan size?</label>
+        <input
+          type="text"
+          id="wing-span"
+          placeholder="Enter size (e.g., 1 meter)"
+        />
+
+        <label for="landing-gear">Do you plan to add landing gear?</label>
+        <select id="landing-gear">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <button id="submit">Get Materials</button>
+      </div>
+      <div id="output">
+        <h2>Required Materials:</h2>
+        <ul id="materials-list"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
